@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agent Arena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Martian+Mono:wght@300;500&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE6; --card:#FBF9F4; --ink:#1C1A16; --muted:#6F6A60; --rule:#D9D2C3;
+    --up:#1F7A3D; --down:#B42318;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 "Instrument Sans",system-ui,sans-serif;
+       padding:env(safe-area-inset-top) 0 40px}
+  main{max-width:760px;margin:0 auto;padding:18px 16px}
+  h1{font:400 40px/1 "Young Serif",serif;margin:8px 0 4px;letter-spacing:-.5px}
+  h2{font:400 21px/1.2 "Young Serif",serif;margin:30px 0 10px}
+  .mono,.num{font-family:"Martian Mono",monospace}
+  .sub{color:var(--muted);font-size:12px}
+  .verdict{margin:16px 0 0;padding:12px 14px;background:var(--ink);color:var(--paper);border-radius:10px;font-size:14px}
+  .verdict b{font-weight:600}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px}
+  svg{width:100%;height:auto;display:block}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .chip{border:1px solid var(--rule);background:var(--card);border-radius:99px;padding:4px 10px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .chip.off{opacity:.35}
+  .row{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;padding:12px 4px;border-bottom:1px solid var(--rule);cursor:pointer}
+  .row:last-child{border-bottom:0}
+  .rank{font:400 22px "Young Serif",serif;color:var(--muted)}
+  .name{font-weight:600;display:flex;align-items:center;gap:8px}
+  .name i{width:9px;height:9px;border-radius:2px}
+  .stats{font:300 11px "Martian Mono",monospace;color:var(--muted);margin-top:3px}
+  .ret{font:500 17px "Martian Mono",monospace;text-align:right}
+  .ret small{display:block;font-size:10px;font-weight:300;color:var(--muted)}
+  .up{color:var(--up)} .down{color:var(--down)}
+  .detail{display:none;grid-column:1/-1;padding:4px 0 6px 38px;font-size:13px}
+  .row.open .detail{display:block}
+  .bar{display:grid;grid-template-columns:70px 1fr 44px;gap:8px;align-items:center;font:300 11px "Martian Mono",monospace;margin:3px 0}
+  .bar span{height:7px;border-radius:4px}
+  .blurb{color:var(--muted);margin:0 0 8px}
+  .feed .item{padding:12px 0;border-bottom:1px solid var(--rule)}
+  .feed .item:last-child{border-bottom:0}
+  .meta{font:300 11px "Martian Mono",monospace;color:var(--muted);display:flex;gap:8px;align-items:center;margin-bottom:4px}
+  .tag{border-radius:4px;padding:1px 6px;color:#fff;font-weight:500}
+  .note{color:var(--muted);font-style:italic;font-size:13px;margin-top:4px}
+  #more{margin-top:10px;width:100%;padding:10px;border-radius:8px;border:1px solid var(--rule);background:var(--paper);font:inherit;cursor:pointer}
+  select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--rule);background:var(--card)}
+  footer{margin-top:30px;color:var(--muted);font-size:12px}
+  .empty{color:var(--muted);padding:20px 0;text-align:center}
+</style>
+</head>
+<body>
+<main>
+  <div class="sub mono" id="dateline">Loading…</div>
+  <h1>Agent Arena</h1>
+  <div class="sub">Four AI traders, one monkey and an index fund. £10,000 of paper money each.</div>
+  <div class="verdict" id="verdict"></div>
+
+  <h2>Race so far</h2>
+  <div class="card"><div id="chart"></div><div class="chips" id="chips"></div></div>
+
+  <h2>Leaderboard</h2>
+  <div class="card" id="board"></div>
+
+  <h2>Trading desk chatter</h2>
+  <div style="margin-bottom:8px"><select id="filter"><option value="">All agents</option></select></div>
+  <div class="card feed" id="feed"></div>
+
+  <footer>Paper trading only. Orders fill at the next day's open with 0.1% costs. Dividends ignored. Treat anything under ~3 months as noise.</footer>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = (v, d=1) => v == null ? "–" : (v > 0 ? "+" : "") + v.toFixed(d) + "%";
+const cls = v => v > 0 ? "up" : v < 0 ? "down" : "";
+const hidden = new Set();
+let DATA, feedLimit = 12;
+
+fetch("data.json?" + Date.now()).then(r => r.json()).then(d => { DATA = d; render(); })
+  .catch(() => { $("#dateline").textContent = "No data yet. The first run hasn't happened."; });
+
+function render(){
+  const d = DATA, byId = Object.fromEntries(d.agents.map(a => [a.id, a]));
+  $("#dateline").textContent = `Day ${d.days} · since ${d.start_date} · as of ${d.as_of}`;
+
+  const ranked = [...d.agents].sort((a,b) => b.return_pct - a.return_pct);
+  const llm = d.agents.filter(a => a.kind === "llm");
+  const monkey = byId.monkey, bench = byId.benchmark;
+  const beatMonkey = llm.filter(a => a.return_pct > monkey.return_pct).length;
+  const beatBench = llm.filter(a => a.return_pct > bench.return_pct).length;
+  $("#verdict").innerHTML = `Leader: <b>${esc(ranked[0].name)}</b> (${pct(ranked[0].return_pct)}). ` +
+    `AI agents beating the monkey: <b>${beatMonkey}/${llm.length}</b>. Beating the index: <b>${beatBench}/${llm.length}</b>.` +
+    (d.days < 60 ? ` <span style="opacity:.6">Too early to mean anything.</span>` : "");
+
+  drawChart(d, byId);
+
+  $("#chips").innerHTML = d.agents.map(a =>
+    `<span class="chip ${hidden.has(a.id) ? "off" : ""}" data-id="${a.id}"><i style="background:${a.color}"></i>${esc(a.name)}</span>`).join("");
+  document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
+    hidden.has(c.dataset.id) ? hidden.delete(c.dataset.id) : hidden.add(c.dataset.id); render();
+  });
+
+  $("#board").innerHTML = ranked.map((a, i) => `
+    <div class="row" data-id="${a.id}">
+      <div class="rank">${i + 1}</div>
+      <div>
+        <div class="name"><i style="background:${a.color}"></i>${esc(a.name)}</div>
+        <div class="stats">£${Math.round(a.value).toLocaleString("en-GB")} · max dd ${pct(a.max_drawdown_pct)} · ${a.trades} trades · £${a.costs_paid.toFixed(0)} costs${a.sharpe != null ? " · sharpe " + a.sharpe : ""}</div>
+      </div>
+      <div class="ret ${cls(a.return_pct)}">${pct(a.return_pct, 2)}<small>${a.id === "benchmark" ? "the bar" : "vs index " + pct(a.vs_benchmark_pct)}</small></div>
+      <div class="detail">
+        <p class="blurb">${esc(a.blurb)}</p>
+        ${a.positions.length ? a.positions.map(([t, w]) =>
+          `<div class="bar"><div>${esc(t)}</div><span style="width:${Math.min(100, w / Math.max(...a.positions.map(p => p[1])) * 100)}%;background:${a.color}"></span><div>${w.toFixed(1)}%</div></div>`).join("") : "<div class='sub'>All cash.</div>"}
+        <div class="sub" style="margin-top:6px">Cash ${a.cash_pct}% · turnover ${a.turnover_x}×${a.pending ? " · new orders queued for next open" : ""}</div>
+      </div>
+    </div>`).join("");
+  document.querySelectorAll(".row").forEach(r => r.onclick = () => r.classList.toggle("open"));
+
+  const f = $("#filter");
+  if (f.options.length === 1) {
+    d.agents.filter(a => a.id !== "benchmark").forEach(a => f.add(new Option(a.name, a.id)));
+    f.onchange = () => { feedLimit = 12; renderFeed(); };
+  }
+  renderFeed();
+}
+
+function renderFeed(){
+  const d = DATA, byId = Object.fromEntries(d.agents.map(a => [a.id, a]));
+  const want = $("#filter").value;
+  const all = d.feed.filter(x => (!want || x.agent === want) && !(x.agent === "monkey" && x.action === "hold"));
+  const items = all.slice(0, feedLimit);
+  $("#feed").innerHTML = items.length ? items.map(x => {
+    const a = byId[x.agent] || {name: x.agent, color: "#888"};
+    const t = x.targets ? Object.entries(x.targets).sort((p,q) => q[1]-p[1]).map(([k,v]) => `${k} ${(v*100).toFixed(0)}%`).join(", ") : "";
+    return `<div class="item">
+      <div class="meta"><span class="tag" style="background:${a.color}">${esc(a.name)}</span>${esc(x.date)} · ${x.action === "hold" ? "held" : "rebalanced"}${x.error ? " · ⚠ error" : ""}</div>
+      <div>${esc(x.reasoning)}</div>
+      ${t ? `<div class="stats">${esc(t)}</div>` : ""}
+      ${x.note ? `<div class="note">Note to self: ${esc(x.note)}</div>` : ""}
+    </div>`;
+  }).join("") + (all.length > feedLimit ? `<button id="more">Show more</button>` : "") : `<div class="empty">Nothing yet.</div>`;
+  const m = $("#more"); if (m) m.onclick = () => { feedLimit += 15; renderFeed(); };
+}
+
+function drawChart(d, byId){
+  const W = 380, H = 230, P = {l: 40, r: 8, t: 10, b: 22};
+  const dates = d.history.dates, n = dates.length;
+  const series = Object.entries(d.history.series).filter(([id]) => !hidden.has(id))
+    .map(([id, vals]) => [id, vals.map(v => (v / d.starting_cash - 1) * 100)]);
+  if (!n || !series.length) { $("#chart").innerHTML = `<div class="empty">No data.</div>`; return; }
+  const all = series.flatMap(s => s[1]);
+  let lo = Math.min(0, ...all), hi = Math.max(0, ...all);
+  const pad = Math.max((hi - lo) * 0.1, 0.5); lo -= pad; hi += pad;
+  const x = i => P.l + (n === 1 ? (W - P.l - P.r) / 2 : i * (W - P.l - P.r) / (n - 1));
+  const y = v => P.t + (hi - v) * (H - P.t - P.b) / (hi - lo);
+  const step = niceStep((hi - lo) / 5);
+  let grid = "";
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    grid += `<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="${Math.abs(v) < 1e-9 ? "#1C1A16" : "#D9D2C3"}" stroke-width="${Math.abs(v) < 1e-9 ? 1 : .6}"/>`;
+    grid += `<text x="${P.l-6}" y="${y(v)+4}" text-anchor="end" font-family="Martian Mono" font-size="9.5" fill="#6F6A60">${v > 0 ? "+" : ""}${+v.toFixed(1)}%</text>`;
+  }
+  const lbl = `<text x="${P.l}" y="${H-6}" font-family="Martian Mono" font-size="9.5" fill="#6F6A60">${dates[0]}</text>` +
+              (n > 1 ? `<text x="${W-P.r}" y="${H-6}" text-anchor="end" font-family="Martian Mono" font-size="9.5" fill="#6F6A60">${dates[n-1]}</text>` : "");
+  const lines = series.map(([id, vals]) => {
+    const a = byId[id], w = id === "benchmark" || id === "monkey" ? 1.6 : 2.4;
+    const dash = id === "benchmark" ? ' stroke-dasharray="5 4"' : id === "monkey" ? ' stroke-dasharray="1.5 3"' : "";
+    const pts = vals.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+    return `<polyline points="${pts}" fill="none" stroke="${a.color}" stroke-width="${w}" stroke-linejoin="round"${dash}/>` +
+           `<circle cx="${x(n-1)}" cy="${y(vals[n-1])}" r="3.5" fill="${a.color}"/>`;
+  }).join("");
+  $("#chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}">${grid}${lbl}${lines}</svg>`;
+}
+function niceStep(raw){ const p = 10 ** Math.floor(Math.log10(raw)); return [1,2,2.5,5,10].map(m => m*p).find(s => s >= raw); }
+</script>
+</body>
+</html>

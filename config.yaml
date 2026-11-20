@@ -1,0 +1,98 @@
+# Agent Arena — paper trading only. No real money, no broker connection.
+
+starting_cash_gbp: 10000
+transaction_cost: 0.001        # 0.1% of notional on every buy and sell
+max_position_weight: 0.20      # per-ticker cap for the active agents
+min_trade_fraction: 0.005      # skip rebalances smaller than 0.5% of the portfolio
+model: claude-haiku-5-5        # model used by the LLM agents
+benchmark_ticker: VWRL.L       # Vanguard FTSE All-World, bought and held
+
+universe:
+  uk:
+    - AZN.L
+    - SHEL.L
+    - HSBA.L
+    - ULVR.L
+    - BP.L
+    - GSK.L
+    - RIO.L
+    - REL.L
+    - DGE.L
+    - BATS.L
+    - RR.L
+    - TSCO.L
+    - NG.L
+    - BARC.L
+  us:
+    - AAPL
+    - MSFT
+    - NVDA
+    - AMZN
+    - GOOGL
+    - META
+    - TSLA
+    - JPM
+    - XOM
+    - JNJ
+    - KO
+    - WMT
+    - BRK-B
+    - AVGO
+  etfs:
+    - VWRL.L    # global equities
+    - ISF.L     # FTSE 100
+    - IGLT.L    # UK gilts
+    - SGLN.L    # physical gold
+
+agents:
+  - id: momentum
+    name: Momentum
+    kind: llm
+    color: "#C2410C"
+    inputs: [prices]
+    style: >
+      You are a trend follower. You buy what has been going up and cut what has
+      been going down. You care about 20-120 day returns, moving averages and
+      distance from 52-week highs. You ignore stories and valuations.
+
+  - id: news
+    name: News Sentiment
+    kind: llm
+    color: "#2563EB"
+    inputs: [prices, news]
+    style: >
+      You trade on the news flow. You read the latest headlines for each company
+      and lean into names with clearly improving news and away from names with
+      deteriorating news. You avoid reacting to noise or vague headlines.
+
+  - id: value
+    name: Value
+    kind: llm
+    color: "#15803D"
+    inputs: [prices, fundamentals]
+    style: >
+      You are a patient value investor. You prefer cheap, profitable, dividend-paying
+      businesses (low P/E, low price-to-book, decent yield) and you rarely trade.
+      You hold for months and only change your mind on big valuation shifts.
+
+  - id: contrarian
+    name: Contrarian
+    kind: llm
+    color: "#7C3AED"
+    inputs: [prices, news]
+    style: >
+      You are a contrarian. You buy quality names after sharp sell-offs and trim
+      names that have run up too far too fast. You assume crowds overreact, but
+      you avoid catching companies with genuinely broken stories.
+
+  - id: monkey
+    name: Random Monkey
+    kind: random
+    color: "#A16207"
+    description: Picks 8 random names with random weights, reshuffles monthly. The control.
+
+  - id: benchmark
+    name: Benchmark (All-World)
+    kind: buy_and_hold
+    color: "#57534E"
+    description: 100% in a global index tracker, never trades again.
