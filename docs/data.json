@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-20T23:17+00:00",
- "as_of": "2026-11-20",
+ "updated": "2026-11-23T23:24+00:00",
+ "as_of": "2026-11-23",
  "start_date": "2026-11-20",
- "days": 1,
+ "days": 2,
  "starting_cash": 10000,
  "agents": [
   {
@@ -11,28 +11,46 @@
    "color": "#C2410C",
    "kind": "llm",
    "blurb": "You are a trend follower. You buy what has been going up and cut what has been going down. You care about 20-120 day returns, moving averages and distance from 52-week highs. You ignore stories and valuations.",
-   "value": "10000",
-   "return_pct": 0.0,
+   "value": 10066.24,
+   "return_pct": 0.66,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": 0.0,
-   "trades": 0,
-   "costs_paid": 0.0,
-   "turnover_x": 0.0,
-   "cash_pct": 100.0,
-   "positions": [],
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "WMT": 0.14,
-     "TSCO.L": 0.14,
-     "DGE.L": 0.14,
-     "KO": 0.14,
-     "BRK-B": 0.14,
-     "JNJ": 0.14,
-     "AAPL": 0.14
-    }
-   }
+   "vs_benchmark_pct": -2.28,
+   "trades": 7,
+   "costs_paid": 9.8,
+   "turnover_x": 0.98,
+   "cash_pct": 1.9,
+   "positions": [
+    [
+     "WMT",
+     14.2
+    ],
+    [
+     "KO",
+     14.1
+    ],
+    [
+     "AAPL",
+     14.0
+    ],
+    [
+     "TSCO.L",
+     14.0
+    ],
+    [
+     "DGE.L",
+     14.0
+    ],
+    [
+     "JNJ",
+     13.9
+    ],
+    [
+     "BRK-B",
+     13.9
+    ]
+   ],
+   "pending": null
   },
   {
    "id": "news",
@@ -40,26 +58,56 @@
    "color": "#2563EB",
    "kind": "llm",
    "blurb": "You trade on the news flow. You read the latest headlines for each company and lean into names with clearly improving news and away from names with deteriorating news. You avoid reacting to noise or vague headlines.",
-   "value": "10000",
-   "return_pct": 0.0,
+   "value": 10041.23,
+   "return_pct": 0.41,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": 0.0,
-   "trades": 0,
-   "costs_paid": 0.0,
-   "turnover_x": 0.0,
-   "cash_pct": 100.0,
-   "positions": [],
+   "vs_benchmark_pct": -2.53,
+   "trades": 7,
+   "costs_paid": 7.9,
+   "turnover_x": 0.79,
+   "cash_pct": 20.8,
+   "positions": [
+    [
+     "AZN.L",
+     15.2
+    ],
+    [
+     "GSK.L",
+     12.1
+    ],
+    [
+     "BP.L",
+     11.9
+    ],
+    [
+     "WMT",
+     10.2
+    ],
+    [
+     "SHEL.L",
+     10.0
+    ],
+    [
+     "BRK-B",
+     10.0
+    ],
+    [
+     "XOM",
+     9.9
+    ]
+   ],
    "pending": {
-    "decided": "2026-11-20",
+    "decided": "2026-11-23",
     "targets": {
-     "AZN.L": 0.15,
-     "GSK.L": 0.12,
+     "AZN.L": 0.18,
+     "GSK.L": 0.15,
      "BP.L": 0.12,
-     "XOM": 0.1,
      "SHEL.L": 0.1,
+     "BRK-B": 0.1,
      "WMT": 0.1,
-     "BRK-B": 0.1
+     "TSCO.L": 0.08,
+     "XOM": 0.08
     }
    }
   },
@@ -69,29 +117,50 @@
    "color": "#15803D",
    "kind": "llm",
    "blurb": "You are a patient value investor. You prefer cheap, profitable, dividend-paying businesses (low P/E, low price-to-book, decent yield) and you rarely trade. You hold for months and only change your mind on big valuation shifts.",
-   "value": "10000",
-   "return_pct": 0.0,
+   "value": 10080.66,
+   "return_pct": 0.81,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": 0.0,
-   "trades": 0,
-   "costs_paid": 0.0,
-   "turnover_x": 0.0,
-   "cash_pct": 100.0,
-   "positions": [],
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "SHEL.L": 0.12,
-     "HSBA.L": 0.12,
-     "BARC.L": 0.1,
-     "RIO.L": 0.12,
-     "BATS.L": 0.12,
-     "NG.L": 0.1,
-     "GSK.L": 0.1,
-     "XOM": 0.1
-    }
-   }
+   "vs_benchmark_pct": -2.14,
+   "trades": 8,
+   "costs_paid": 8.8,
+   "turnover_x": 0.88,
+   "cash_pct": 11.8,
+   "positions": [
+    [
+     "HSBA.L",
+     12.1
+    ],
+    [
+     "BATS.L",
+     12.0
+    ],
+    [
+     "RIO.L",
+     12.0
+    ],
+    [
+     "SHEL.L",
+     11.9
+    ],
+    [
+     "BARC.L",
+     10.2
+    ],
+    [
+     "NG.L",
+     10.0
+    ],
+    [
+     "GSK.L",
+     10.0
+    ],
+    [
+     "XOM",
+     9.8
+    ]
+   ],
+   "pending": null
   },
   {
    "id": "contrarian",
@@ -99,30 +168,75 @@
    "color": "#7C3AED",
    "kind": "llm",
    "blurb": "You are a contrarian. You buy quality names after sharp sell-offs and trim names that have run up too far too fast. You assume crowds overreact, but you avoid catching companies with genuinely broken stories.",
-   "value": "10000",
-   "return_pct": 0.0,
+   "value": 10043.77,
+   "return_pct": 0.44,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": 0.0,
-   "trades": 0,
-   "costs_paid": 0.0,
-   "turnover_x": 0.0,
-   "cash_pct": 100.0,
-   "positions": [],
+   "vs_benchmark_pct": -2.51,
+   "trades": 11,
+   "costs_paid": 9.0,
+   "turnover_x": 0.9,
+   "cash_pct": 9.9,
+   "positions": [
+    [
+     "VWRL.L",
+     10.3
+    ],
+    [
+     "AZN.L",
+     10.1
+    ],
+    [
+     "MSFT",
+     9.7
+    ],
+    [
+     "HSBA.L",
+     8.1
+    ],
+    [
+     "GSK.L",
+     8.1
+    ],
+    [
+     "SHEL.L",
+     8.0
+    ],
+    [
+     "BP.L",
+     7.9
+    ],
+    [
+     "AMZN",
+     7.8
+    ],
+    [
+     "RIO.L",
+     7.0
+    ],
+    [
+     "ULVR.L",
+     7.0
+    ],
+    [
+     "BARC.L",
+     6.2
+    ]
+   ],
    "pending": {
-    "decided": "2026-11-20",
+    "decided": "2026-11-23",
     "targets": {
-     "AZN.L": 0.1,
-     "MSFT": 0.1,
-     "VWRL.L": 0.1,
+     "AZN.L": 0.095,
      "SHEL.L": 0.08,
-     "BP.L": 0.08,
-     "GSK.L": 0.08,
-     "HSBA.L": 0.08,
-     "AMZN": 0.08,
-     "RIO.L": 0.07,
+     "HSBA.L": 0.1,
+     "AMZN": 0.078,
+     "BP.L": 0.079,
+     "RIO.L": 0.09,
      "ULVR.L": 0.07,
-     "BARC.L": 0.06
+     "BARC.L": 0.062,
+     "GSK.L": 0.08,
+     "MSFT": 0.1,
+     "VWRL.L": 0.1
     }
    }
   },
@@ -132,29 +246,50 @@
    "color": "#A16207",
    "kind": "random",
    "blurb": "Picks 8 random names with random weights, reshuffles monthly. The control.",
-   "value": "10000",
-   "return_pct": 0.0,
+   "value": 10059.64,
+   "return_pct": 0.6,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": 0.0,
-   "trades": 0,
-   "costs_paid": 0.0,
-   "turnover_x": 0.0,
-   "cash_pct": 100.0,
-   "positions": [],
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "RIO.L": 0.1222,
-     "VWRL.L": 0.0774,
-     "ULVR.L": 0.0334,
-     "HSBA.L": 0.1158,
-     "BATS.L": 0.162,
-     "AZN.L": 0.2,
-     "AVGO": 0.1562,
-     "SHEL.L": 0.1211
-    }
-   }
+   "vs_benchmark_pct": -2.35,
+   "trades": 8,
+   "costs_paid": 9.88,
+   "turnover_x": 0.99,
+   "cash_pct": 1.1,
+   "positions": [
+    [
+     "AZN.L",
+     20.2
+    ],
+    [
+     "BATS.L",
+     16.3
+    ],
+    [
+     "AVGO",
+     15.2
+    ],
+    [
+     "RIO.L",
+     12.2
+    ],
+    [
+     "SHEL.L",
+     12.1
+    ],
+    [
+     "HSBA.L",
+     11.7
+    ],
+    [
+     "VWRL.L",
+     7.9
+    ],
+    [
+     "ULVR.L",
+     3.3
+    ]
+   ],
+   "pending": null
   },
   {
    "id": "benchmark",
@@ -162,50 +297,140 @@
    "color": "#57534E",
    "kind": "buy_and_hold",
    "blurb": "100% in a global index tracker, never trades again.",
-   "value": "10000",
-   "return_pct": 0.0,
+   "value": 10294.65,
+   "return_pct": 2.95,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
    "vs_benchmark_pct": 0.0,
-   "trades": 0,
-   "costs_paid": 0.0,
-   "turnover_x": 0.0,
-   "cash_pct": 100.0,
-   "positions": [],
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "VWRL.L": 1.0
-    }
-   }
+   "trades": 1,
+   "costs_paid": 9.99,
+   "turnover_x": 1.0,
+   "cash_pct": 0.0,
+   "positions": [
+    [
+     "VWRL.L",
+     100.0
+    ]
+   ],
+   "pending": null
   }
  ],
  "history": {
   "dates": [
-   "2026-11-20"
+   "2026-11-20",
+   "2026-11-23"
   ],
   "series": {
    "momentum": [
-    10000
+    10000.0,
+    10066.24
    ],
    "news": [
-    10000
+    10000.0,
+    10041.23
    ],
    "value": [
-    10000
+    10000.0,
+    10080.66
    ],
    "contrarian": [
-    10000
+    10000.0,
+    10043.77
    ],
    "monkey": [
-    10000
+    10000.0,
+    10059.64
    ],
    "benchmark": [
-    10000
+    10000.0,
+    10294.65
    ]
   }
  },
  "feed": [
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "action": "hold",
+   "targets": null,
+   "reasoning": "Monkey is happy with its bananas.",
+   "note": "",
+   "usage": null,
+   "error": false
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "action": "rebalance",
+   "targets": {
+    "AZN.L": 0.095,
+    "SHEL.L": 0.08,
+    "HSBA.L": 0.1,
+    "AMZN": 0.078,
+    "BP.L": 0.079,
+    "RIO.L": 0.09,
+    "ULVR.L": 0.07,
+    "BARC.L": 0.062,
+    "GSK.L": 0.08,
+    "MSFT": 0.1,
+    "VWRL.L": 0.1
+   },
+   "reasoning": "Adding modestly to sold-off quality names: HSBA (below both moving averages, 20% off high) and RIO (30% off high, deep 60-day drawdown), plus MSFT after its pullback. Trimming AZN, which has held up well and sits near its 60-day run-up. Other positions roughly unchanged. Turnover kept small to limit trading costs.",
+   "note": "Check whether the AI sell-off stabilises and whether HSBA and RIO recover off lows. Avoid chasing the single-day Nvidia-driven rally.",
+   "usage": {
+    "in": 6649,
+    "out": 1140
+   },
+   "error": false
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "action": "hold",
+   "targets": null,
+   "reasoning": "No big valuation shift since the last review. Holdings remain cheap with solid yields: SHEL, HSBA, BATS, RIO, BARC, GSK, NG and XOM all screen at low P/E and high dividend yield. Dividends remain intact. Cash is 11.8%, a modest buffer. Churn costs 0.1% each way, so I'm leaving the book untouched.",
+   "note": "Revisit only on dividend cuts or large valuation moves. Keep watching RIO and BARC, both below SMA200 in downtrends. Consider deploying spare cash only on a clear valuation opportunity.",
+   "usage": {
+    "in": 3693,
+    "out": 369
+   },
+   "error": false
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "action": "rebalance",
+   "targets": {
+    "AZN.L": 0.18,
+    "GSK.L": 0.15,
+    "BP.L": 0.12,
+    "SHEL.L": 0.1,
+    "BRK-B": 0.1,
+    "WMT": 0.1,
+    "TSCO.L": 0.08,
+    "XOM": 0.08
+   },
+   "reasoning": "Added to GSK (fresh lung cancer approval, EMA backing for Bexsero) and AZN (growth and pipeline coverage). Added TSCO on the UK-EU food deal backed by retailers. Trimmed XOM, where news is neutral and 20-day momentum is weak. Kept BP, SHEL, BRK-B and WMT near current weights. Left about 9% in cash.",
+   "note": "Check whether the broad tech correction deepens. Cut AZN or GSK if regulatory or trial news turns negative. Avoid churn on noise headlines.",
+   "usage": {
+    "in": 6586,
+    "out": 1005
+   },
+   "error": false
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "action": "hold",
+   "targets": null,
+   "reasoning": "All seven holdings are above both SMA50 and SMA200, sit within 4% of their 52-week highs, and rank among the strongest 60 to 120 day performers in the universe. None breaches the exit rules. Rebalancing would only add 0.1% trading costs, so I am keeping the current weights.",
+   "note": "Exit any holding that drops below SMA50 or falls more than 10% off its high. Watch TSCO.L, KO and WMT for signs of weakening momentum.",
+   "usage": {
+    "in": 2142,
+    "out": 852
+   },
+   "error": false
+  },
   {
    "date": "2026-11-20",
    "agent": "monkey",
@@ -315,5 +540,342 @@
    "error": false
   }
  ],
- "fills": []
+ "fills": [
+  {
+   "date": "2026-11-23",
+   "agent": "benchmark",
+   "ticker": "VWRL.L",
+   "side": "BUY",
+   "gbp": 9990.01,
+   "price": 129.53
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "VWRL.L",
+   "side": "BUY",
+   "gbp": 774.0,
+   "price": 129.53
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "AVGO",
+   "side": "BUY",
+   "gbp": 1562.0,
+   "price": 246.0399
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "ULVR.L",
+   "side": "BUY",
+   "gbp": 334.0,
+   "price": 48.375
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "RIO.L",
+   "side": "BUY",
+   "gbp": 1222.0,
+   "price": 57.23
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "BATS.L",
+   "side": "BUY",
+   "gbp": 1620.0,
+   "price": 43.4
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "HSBA.L",
+   "side": "BUY",
+   "gbp": 1158.0,
+   "price": 12.508
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "AZN.L",
+   "side": "BUY",
+   "gbp": 2000.0,
+   "price": 133.38
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "monkey",
+   "ticker": "SHEL.L",
+   "side": "BUY",
+   "gbp": 1211.0,
+   "price": 35.605
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "VWRL.L",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 129.53
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "MSFT",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 388.3163
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "GSK.L",
+   "side": "BUY",
+   "gbp": 800.0,
+   "price": 18.33
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "BARC.L",
+   "side": "BUY",
+   "gbp": 600.0,
+   "price": 3.9945
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "ULVR.L",
+   "side": "BUY",
+   "gbp": 700.0,
+   "price": 48.375
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "RIO.L",
+   "side": "BUY",
+   "gbp": 700.0,
+   "price": 57.23
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "BP.L",
+   "side": "BUY",
+   "gbp": 800.0,
+   "price": 5.49
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "AMZN",
+   "side": "BUY",
+   "gbp": 800.0,
+   "price": 199.7079
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "HSBA.L",
+   "side": "BUY",
+   "gbp": 800.0,
+   "price": 12.508
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "AZN.L",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 133.38
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "contrarian",
+   "ticker": "SHEL.L",
+   "side": "BUY",
+   "gbp": 800.0,
+   "price": 35.605
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "GSK.L",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 18.33
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "XOM",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 121.1937
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "BARC.L",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 3.9945
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "RIO.L",
+   "side": "BUY",
+   "gbp": 1200.0,
+   "price": 57.23
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "BATS.L",
+   "side": "BUY",
+   "gbp": 1200.0,
+   "price": 43.4
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "NG.L",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 12.24
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "HSBA.L",
+   "side": "BUY",
+   "gbp": 1200.0,
+   "price": 12.508
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "value",
+   "ticker": "SHEL.L",
+   "side": "BUY",
+   "gbp": 1200.0,
+   "price": 35.605
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "BP.L",
+   "side": "BUY",
+   "gbp": 1200.0,
+   "price": 5.49
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "GSK.L",
+   "side": "BUY",
+   "gbp": 1200.0,
+   "price": 18.33
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "WMT",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 97.1683
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "XOM",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 121.1937
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "BRK-B",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 439.3252
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "AZN.L",
+   "side": "BUY",
+   "gbp": 1500.0,
+   "price": 133.38
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "news",
+   "ticker": "SHEL.L",
+   "side": "BUY",
+   "gbp": 1000.0,
+   "price": 35.605
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "DGE.L",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 18.545
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "WMT",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 97.1683
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "TSCO.L",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 5.486
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "AAPL",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 266.8655
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "BRK-B",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 439.3252
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "JNJ",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 207.0667
+  },
+  {
+   "date": "2026-11-23",
+   "agent": "momentum",
+   "ticker": "KO",
+   "side": "BUY",
+   "gbp": 1400.0,
+   "price": 72.5904
+  }
+ ]
 }

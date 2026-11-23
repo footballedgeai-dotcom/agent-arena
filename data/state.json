@@ -1,6 +1,6 @@
 {
  "start_date": "2026-11-20",
- "last_run_date": "2026-11-20",
+ "last_run_date": "2026-11-23",
  "currencies": {
   "AZN.L": "GBp",
   "SHEL.L": "GBp",
@@ -38,142 +38,155 @@
  "agents": {
   "momentum": {
    "portfolio": {
-    "cash": 10000,
-    "positions": {},
-    "costs_paid": 0.0,
-    "trades": 0,
-    "turnover": 0.0
+    "cash": 190.19999999999754,
+    "positions": {
+     "KO": 19.286305968485117,
+     "JNJ": 6.761106073461583,
+     "BRK-B": 3.1867053636134632,
+     "AAPL": 5.246088106256947,
+     "TSCO.L": 255.19505328171348,
+     "WMT": 14.407996168071296,
+     "DGE.L": 75.49204637368564
+    },
+    "costs_paid": 9.800000000000002,
+    "trades": 7,
+    "turnover": 9800.000000000002
    },
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "WMT": 0.14,
-     "TSCO.L": 0.14,
-     "DGE.L": 0.14,
-     "KO": 0.14,
-     "BRK-B": 0.14,
-     "JNJ": 0.14,
-     "AAPL": 0.14
-    }
-   },
+   "pending": null,
    "memory": [
-    "2026-11-20: Check whether these leaders hold above SMA50 and SMA200. Exit any that break below SMA50 or fall more than 10% off highs."
+    "2026-11-20: Check whether these leaders hold above SMA50 and SMA200. Exit any that break below SMA50 or fall more than 10% off highs.",
+    "2026-11-23: Exit any holding that drops below SMA50 or falls more than 10% off its high. Watch TSCO.L, KO and WMT for signs of weakening momentum."
    ]
   },
   "news": {
    "portfolio": {
-    "cash": 10000,
-    "positions": {},
-    "costs_paid": 0.0,
-    "trades": 0,
-    "turnover": 0.0
+    "cash": 2092.1000000000004,
+    "positions": {
+     "SHEL.L": 28.085942985535738,
+     "AZN.L": 11.246063877642825,
+     "BRK-B": 2.276218116866759,
+     "XOM": 8.251254938528161,
+     "WMT": 10.291425834336637,
+     "GSK.L": 65.46644844517185,
+     "BP.L": 218.5792349726776
+    },
+    "costs_paid": 7.9,
+    "trades": 7,
+    "turnover": 7900.0
    },
    "pending": {
-    "decided": "2026-11-20",
+    "decided": "2026-11-23",
     "targets": {
-     "AZN.L": 0.15,
-     "GSK.L": 0.12,
+     "AZN.L": 0.18,
+     "GSK.L": 0.15,
      "BP.L": 0.12,
-     "XOM": 0.1,
      "SHEL.L": 0.1,
+     "BRK-B": 0.1,
      "WMT": 0.1,
-     "BRK-B": 0.1
+     "TSCO.L": 0.08,
+     "XOM": 0.08
     }
    },
    "memory": [
-    "2026-11-20: Watch whether the broad correction deepens. Cut names where news turns negative, such as AZN if the BLA is delayed. Avoid churn."
+    "2026-11-20: Watch whether the broad correction deepens. Cut names where news turns negative, such as AZN if the BLA is delayed. Avoid churn.",
+    "2026-11-23: Check whether the broad tech correction deepens. Cut AZN or GSK if regulatory or trial news turns negative. Avoid churn on noise headlines."
    ]
   },
   "value": {
    "portfolio": {
-    "cash": 10000,
-    "positions": {},
-    "costs_paid": 0.0,
-    "trades": 0,
-    "turnover": 0.0
+    "cash": 1191.1999999999998,
+    "positions": {
+     "SHEL.L": 33.70313158264288,
+     "HSBA.L": 95.93859555124581,
+     "NG.L": 81.69934640522875,
+     "BATS.L": 27.649769585253456,
+     "RIO.L": 20.968023763760264,
+     "BARC.L": 250.3442156566287,
+     "XOM": 8.251254938528161,
+     "GSK.L": 54.55537370430987
+    },
+    "costs_paid": 8.8,
+    "trades": 8,
+    "turnover": 8800.0
    },
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "SHEL.L": 0.12,
-     "HSBA.L": 0.12,
-     "BARC.L": 0.1,
-     "RIO.L": 0.12,
-     "BATS.L": 0.12,
-     "NG.L": 0.1,
-     "GSK.L": 0.1,
-     "XOM": 0.1
-    }
-   },
+   "pending": null,
    "memory": [
-    "2026-11-20: Hold for months. Revisit only on big valuation shifts or dividend cuts. Watch RIO and BARC, which are in downtrends and below SMA200."
+    "2026-11-20: Hold for months. Revisit only on big valuation shifts or dividend cuts. Watch RIO and BARC, which are in downtrends and below SMA200.",
+    "2026-11-23: Revisit only on dividend cuts or large valuation moves. Keep watching RIO and BARC, both below SMA200 in downtrends. Consider deploying spare cash only on a clear valuation opportunity."
    ]
   },
   "contrarian": {
    "portfolio": {
-    "cash": 10000,
-    "positions": {},
-    "costs_paid": 0.0,
-    "trades": 0,
-    "turnover": 0.0
+    "cash": 991.0000000000009,
+    "positions": {
+     "SHEL.L": 22.46875438842859,
+     "AZN.L": 7.49737591842855,
+     "HSBA.L": 63.95906370083054,
+     "AMZN": 4.005850076804014,
+     "BP.L": 145.71948998178505,
+     "RIO.L": 12.231347195526823,
+     "ULVR.L": 14.470284237726101,
+     "BARC.L": 150.20652939397723,
+     "GSK.L": 43.644298963447895,
+     "MSFT": 2.575220566929053,
+     "VWRL.L": 7.720219326982907
+    },
+    "costs_paid": 9.0,
+    "trades": 11,
+    "turnover": 9000.0
    },
    "pending": {
-    "decided": "2026-11-20",
+    "decided": "2026-11-23",
     "targets": {
-     "AZN.L": 0.1,
-     "MSFT": 0.1,
-     "VWRL.L": 0.1,
+     "AZN.L": 0.095,
      "SHEL.L": 0.08,
-     "BP.L": 0.08,
-     "GSK.L": 0.08,
-     "HSBA.L": 0.08,
-     "AMZN": 0.08,
-     "RIO.L": 0.07,
+     "HSBA.L": 0.1,
+     "AMZN": 0.078,
+     "BP.L": 0.079,
+     "RIO.L": 0.09,
      "ULVR.L": 0.07,
-     "BARC.L": 0.06
+     "BARC.L": 0.062,
+     "GSK.L": 0.08,
+     "MSFT": 0.1,
+     "VWRL.L": 0.1
     }
    },
    "memory": [
-    "2026-11-20: Watch whether the AI sell-off stabilises. Check if SEC or accounting issues spread to mega-caps, and whether value names keep recovering."
+    "2026-11-20: Watch whether the AI sell-off stabilises. Check if SEC or accounting issues spread to mega-caps, and whether value names keep recovering.",
+    "2026-11-23: Check whether the AI sell-off stabilises and whether HSBA and RIO recover off lows. Avoid chasing the single-day Nvidia-driven rally."
    ]
   },
   "monkey": {
    "portfolio": {
-    "cash": 10000,
-    "positions": {},
-    "costs_paid": 0.0,
-    "trades": 0,
-    "turnover": 0.0
+    "cash": 109.11900000000185,
+    "positions": {
+     "SHEL.L": 34.01207695548378,
+     "AZN.L": 14.9947518368571,
+     "HSBA.L": 92.5807447069522,
+     "BATS.L": 37.327188940092164,
+     "RIO.L": 21.352437532762536,
+     "ULVR.L": 6.904392764857882,
+     "AVGO": 6.348563325429115,
+     "VWRL.L": 5.9754497590847695
+    },
+    "costs_paid": 9.881,
+    "trades": 8,
+    "turnover": 9881.0
    },
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "RIO.L": 0.1222,
-     "VWRL.L": 0.0774,
-     "ULVR.L": 0.0334,
-     "HSBA.L": 0.1158,
-     "BATS.L": 0.162,
-     "AZN.L": 0.2,
-     "AVGO": 0.1562,
-     "SHEL.L": 0.1211
-    }
-   },
+   "pending": null,
    "memory": []
   },
   "benchmark": {
    "portfolio": {
-    "cash": 10000,
-    "positions": {},
-    "costs_paid": 0.0,
-    "trades": 0,
-    "turnover": 0.0
+    "cash": 0.0,
+    "positions": {
+     "VWRL.L": 77.12506820162746
+    },
+    "costs_paid": 9.990009990009993,
+    "trades": 1,
+    "turnover": 9990.009990009992
    },
-   "pending": {
-    "decided": "2026-11-20",
-    "targets": {
-     "VWRL.L": 1.0
-    }
-   },
+   "pending": null,
    "memory": []
   }
  },
@@ -187,6 +200,17 @@
     "contrarian": 10000,
     "monkey": 10000,
     "benchmark": 10000
+   }
+  },
+  {
+   "date": "2026-11-23",
+   "values": {
+    "momentum": 10066.24,
+    "news": 10041.23,
+    "value": 10080.66,
+    "contrarian": 10043.77,
+    "monkey": 10059.64,
+    "benchmark": 10294.65
    }
   }
  ]
