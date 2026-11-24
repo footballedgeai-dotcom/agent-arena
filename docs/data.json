@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-23T23:24+00:00",
- "as_of": "2026-11-23",
+ "updated": "2026-11-24T23:23+00:00",
+ "as_of": "2026-11-24",
  "start_date": "2026-11-20",
- "days": 2,
+ "days": 3,
  "starting_cash": 10000,
  "agents": [
   {
@@ -11,11 +11,11 @@
    "color": "#C2410C",
    "kind": "llm",
    "blurb": "You are a trend follower. You buy what has been going up and cut what has been going down. You care about 20-120 day returns, moving averages and distance from 52-week highs. You ignore stories and valuations.",
-   "value": 10066.24,
-   "return_pct": 0.66,
+   "value": 10167.92,
+   "return_pct": 1.68,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": -2.28,
+   "vs_benchmark_pct": 0.72,
    "trades": 7,
    "costs_paid": 9.8,
    "turnover_x": 0.98,
@@ -23,6 +23,10 @@
    "positions": [
     [
      "WMT",
+     14.3
+    ],
+    [
+     "DGE.L",
      14.2
     ],
     [
@@ -30,24 +34,20 @@
      14.1
     ],
     [
-     "AAPL",
-     14.0
-    ],
-    [
-     "TSCO.L",
-     14.0
-    ],
-    [
-     "DGE.L",
-     14.0
-    ],
-    [
      "JNJ",
+     14.0
+    ],
+    [
+     "AAPL",
      13.9
     ],
     [
      "BRK-B",
-     13.9
+     13.8
+    ],
+    [
+     "TSCO.L",
+     13.8
     ]
    ],
    "pending": null
@@ -58,56 +58,61 @@
    "color": "#2563EB",
    "kind": "llm",
    "blurb": "You trade on the news flow. You read the latest headlines for each company and lean into names with clearly improving news and away from names with deteriorating news. You avoid reacting to noise or vague headlines.",
-   "value": 10041.23,
-   "return_pct": 0.41,
+   "value": 10128.86,
+   "return_pct": 1.29,
    "max_drawdown_pct": 0.0,
    "sharpe": null,
-   "vs_benchmark_pct": -2.53,
-   "trades": 7,
-   "costs_paid": 7.9,
-   "turnover_x": 0.79,
-   "cash_pct": 20.8,
+   "vs_benchmark_pct": 0.33,
+   "trades": 11,
+   "costs_paid": 9.45,
+   "turnover_x": 0.95,
+   "cash_pct": 9.0,
    "positions": [
     [
      "AZN.L",
-     15.2
+     18.3
     ],
     [
      "GSK.L",
-     12.1
+     15.2
     ],
     [
      "BP.L",
-     11.9
+     11.8
     ],
     [
      "WMT",
      10.2
     ],
     [
-     "SHEL.L",
-     10.0
+     "BRK-B",
+     9.9
     ],
     [
-     "BRK-B",
-     10.0
+     "SHEL.L",
+     9.8
     ],
     [
      "XOM",
-     9.9
+     8.0
+    ],
+    [
+     "TSCO.L",
+     7.9
     ]
    ],
    "pending": {
-    "decided": "2026-11-23",
+    "decided": "2026-11-24",
     "targets": {
      "AZN.L": 0.18,
-     "GSK.L": 0.15,
-     "BP.L": 0.12,
-     "SHEL.L": 0.1,
-     "BRK-B": 0.1,
+     "GSK.L": 0.16,
+     "JNJ": 0.08,
      "WMT": 0.1,
      "TSCO.L": 0.08,
-     "XOM": 0.08
+     "SHEL.L": 0.1,
+     "BP.L": 0.1,
+     "BRK-B": 0.1,
+     "XOM": 0.06
     }
    }
   },
@@ -117,47 +122,47 @@
    "color": "#15803D",
    "kind": "llm",
    "blurb": "You are a patient value investor. You prefer cheap, profitable, dividend-paying businesses (low P/E, low price-to-book, decent yield) and you rarely trade. You hold for months and only change your mind on big valuation shifts.",
-   "value": 10080.66,
-   "return_pct": 0.81,
-   "max_drawdown_pct": 0.0,
+   "value": 10030.44,
+   "return_pct": 0.3,
+   "max_drawdown_pct": -0.5,
    "sharpe": null,
-   "vs_benchmark_pct": -2.14,
+   "vs_benchmark_pct": -0.65,
    "trades": 8,
    "costs_paid": 8.8,
    "turnover_x": 0.88,
-   "cash_pct": 11.8,
+   "cash_pct": 11.9,
    "positions": [
     [
-     "HSBA.L",
-     12.1
-    ],
-    [
      "BATS.L",
-     12.0
-    ],
-    [
-     "RIO.L",
-     12.0
+     12.3
     ],
     [
      "SHEL.L",
      11.9
     ],
     [
-     "BARC.L",
-     10.2
+     "HSBA.L",
+     11.8
     ],
     [
-     "NG.L",
-     10.0
+     "RIO.L",
+     11.6
     ],
     [
      "GSK.L",
+     10.3
+    ],
+    [
+     "NG.L",
+     10.2
+    ],
+    [
+     "BARC.L",
      10.0
     ],
     [
      "XOM",
-     9.8
+     9.9
     ]
    ],
    "pending": null
@@ -168,35 +173,39 @@
    "color": "#7C3AED",
    "kind": "llm",
    "blurb": "You are a contrarian. You buy quality names after sharp sell-offs and trim names that have run up too far too fast. You assume crowds overreact, but you avoid catching companies with genuinely broken stories.",
-   "value": 10043.77,
-   "return_pct": 0.44,
-   "max_drawdown_pct": 0.0,
+   "value": 9991.22,
+   "return_pct": -0.09,
+   "max_drawdown_pct": -0.52,
    "sharpe": null,
-   "vs_benchmark_pct": -2.51,
-   "trades": 11,
-   "costs_paid": 9.0,
-   "turnover_x": 0.9,
-   "cash_pct": 9.9,
+   "vs_benchmark_pct": -1.04,
+   "trades": 14,
+   "costs_paid": 9.46,
+   "turnover_x": 0.95,
+   "cash_pct": 6.7,
    "positions": [
     [
      "VWRL.L",
-     10.3
-    ],
-    [
-     "AZN.L",
      10.1
     ],
     [
+     "AZN.L",
+     9.8
+    ],
+    [
      "MSFT",
-     9.7
+     9.8
     ],
     [
      "HSBA.L",
-     8.1
+     9.7
+    ],
+    [
+     "RIO.L",
+     8.8
     ],
     [
      "GSK.L",
-     8.1
+     8.3
     ],
     [
      "SHEL.L",
@@ -208,35 +217,32 @@
     ],
     [
      "AMZN",
-     7.8
-    ],
-    [
-     "RIO.L",
-     7.0
+     7.7
     ],
     [
      "ULVR.L",
-     7.0
+     7.2
     ],
     [
      "BARC.L",
-     6.2
+     6.0
     ]
    ],
    "pending": {
-    "decided": "2026-11-23",
+    "decided": "2026-11-24",
     "targets": {
-     "AZN.L": 0.095,
+     "HSBA.L": 0.11,
+     "RIO.L": 0.095,
+     "GOOGL": 0.07,
+     "MSFT": 0.0975,
+     "VWRL.L": 0.1,
+     "AZN.L": 0.08,
+     "GSK.L": 0.083,
      "SHEL.L": 0.08,
-     "HSBA.L": 0.1,
-     "AMZN": 0.078,
-     "BP.L": 0.079,
-     "RIO.L": 0.09,
-     "ULVR.L": 0.07,
-     "BARC.L": 0.062,
-     "GSK.L": 0.08,
-     "MSFT": 0.1,
-     "VWRL.L": 0.1
+     "ULVR.L": 0.072,
+     "BP.L": 0.075,
+     "AMZN": 0.07,
+     "BARC.L": 0.06
     }
    }
   },
@@ -246,11 +252,11 @@
    "color": "#A16207",
    "kind": "random",
    "blurb": "Picks 8 random names with random weights, reshuffles monthly. The control.",
-   "value": 10059.64,
-   "return_pct": 0.6,
-   "max_drawdown_pct": 0.0,
+   "value": 9982.7,
+   "return_pct": -0.17,
+   "max_drawdown_pct": -0.76,
    "sharpe": null,
-   "vs_benchmark_pct": -2.35,
+   "vs_benchmark_pct": -1.13,
    "trades": 8,
    "costs_paid": 9.88,
    "turnover_x": 0.99,
@@ -258,35 +264,35 @@
    "positions": [
     [
      "AZN.L",
-     20.2
+     20.9
     ],
     [
      "BATS.L",
-     16.3
+     16.7
     ],
     [
      "AVGO",
-     15.2
-    ],
-    [
-     "RIO.L",
-     12.2
+     14.6
     ],
     [
      "SHEL.L",
      12.1
     ],
     [
+     "RIO.L",
+     11.9
+    ],
+    [
      "HSBA.L",
-     11.7
+     11.5
     ],
     [
      "VWRL.L",
-     7.9
+     7.8
     ],
     [
      "ULVR.L",
-     3.3
+     3.4
     ]
    ],
    "pending": null
@@ -297,9 +303,9 @@
    "color": "#57534E",
    "kind": "buy_and_hold",
    "blurb": "100% in a global index tracker, never trades again.",
-   "value": 10294.65,
-   "return_pct": 2.95,
-   "max_drawdown_pct": 0.0,
+   "value": 10095.67,
+   "return_pct": 0.96,
+   "max_drawdown_pct": -1.93,
    "sharpe": null,
    "vs_benchmark_pct": 0.0,
    "trades": 1,
@@ -318,36 +324,128 @@
  "history": {
   "dates": [
    "2026-11-20",
-   "2026-11-23"
+   "2026-11-23",
+   "2026-11-24"
   ],
   "series": {
    "momentum": [
     10000.0,
-    10066.24
+    10066.24,
+    10167.92
    ],
    "news": [
     10000.0,
-    10041.23
+    10041.23,
+    10128.86
    ],
    "value": [
     10000.0,
-    10080.66
+    10080.66,
+    10030.44
    ],
    "contrarian": [
     10000.0,
-    10043.77
+    10043.77,
+    9991.22
    ],
    "monkey": [
     10000.0,
-    10059.64
+    10059.64,
+    9982.7
    ],
    "benchmark": [
     10000.0,
-    10294.65
+    10294.65,
+    10095.67
    ]
   }
  },
  "feed": [
+  {
+   "date": "2026-11-24",
+   "agent": "monkey",
+   "action": "hold",
+   "targets": null,
+   "reasoning": "Monkey is happy with its bananas.",
+   "note": "",
+   "usage": null,
+   "error": false
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "contrarian",
+   "action": "rebalance",
+   "targets": {
+    "HSBA.L": 0.11,
+    "RIO.L": 0.095,
+    "GOOGL": 0.07,
+    "MSFT": 0.0975,
+    "VWRL.L": 0.1,
+    "AZN.L": 0.08,
+    "GSK.L": 0.083,
+    "SHEL.L": 0.08,
+    "ULVR.L": 0.072,
+    "BP.L": 0.075,
+    "AMZN": 0.07,
+    "BARC.L": 0.06
+   },
+   "reasoning": "Adding to HSBA and RIO, which sold off hard and sit well below their highs, though their stories are not clearly broken. Starting a small GOOGL position on the AI-driven drawdown. Trimming AZN after an 8.7% 20-day run and BP and AMZN modestly to fund these. Keeping VWRL as the core holding.",
+   "note": "Check whether HSBA and RIO recover off lows and whether the AI sell-off stabilises. Be ready to exit RIO if metals weakness becomes structural.",
+   "usage": {
+    "in": 6507,
+    "out": 1210
+   },
+   "error": false
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "value",
+   "action": "hold",
+   "targets": null,
+   "reasoning": "No big valuation shift since the last review. The portfolio is still cheap on P/E, P/B and yield: SHEL, HSBA, BARC, RIO, NG, BATS, GSK and XOM. RIO and BARC are cheap but in downtrends below SMA200, so I'm not adding yet. Cash at 11.9% is acceptable given no clear new bargain. Churn costs 0.1% each way, so I'm holding.",
+   "note": "Watch RIO and BARC for a trend turn or a dividend cut. Deploy the spare cash only on a clear valuation gap, not on short-term price moves.",
+   "usage": {
+    "in": 3773,
+    "out": 462
+   },
+   "error": false
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "news",
+   "action": "rebalance",
+   "targets": {
+    "AZN.L": 0.18,
+    "GSK.L": 0.16,
+    "JNJ": 0.08,
+    "WMT": 0.1,
+    "TSCO.L": 0.08,
+    "SHEL.L": 0.1,
+    "BP.L": 0.1,
+    "BRK-B": 0.1,
+    "XOM": 0.06
+   },
+   "reasoning": "Added JNJ on positive TREMFYA trial news. Lifted GSK on lung cancer approval and EMA backing for Bexsero. Kept AZN despite mixed policy headlines. Nudged TSCO up on market-share gains and SHEL on the ConocoPhillips asset sale. Trimmed XOM, which has no fresh positive news. Left DGE, RIO and BARC unheld given negative flow. Cash rises to about 4%.",
+   "note": "Watch AZN for BLA or regulatory delay, and GSK for trial news. Avoid churn on noise headlines such as the tech and Anthropic chatter.",
+   "usage": {
+    "in": 6458,
+    "out": 1021
+   },
+   "error": false
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "momentum",
+   "action": "hold",
+   "targets": null,
+   "reasoning": "All seven holdings (KO, JNJ, BRK-B, AAPL, TSCO.L, WMT, DGE.L) remain above SMA50 and SMA200 and sit within 3% of their 52-week highs, so no exit rule is triggered. Weights are near equal and drift is small, so rebalancing would only add trading cost. REL.L and ULVR.L are the nearest challengers but do not rank clearly above current holdings.",
+   "note": "Watch TSCO.L, KO and WMT as flagged. Exit any that breaks SMA50 or falls 10% off its high. AZN.L (-10.4%) and BATS.L (-10.3%) are near the exit line.",
+   "usage": {
+    "in": 2211,
+    "out": 1045
+   },
+   "error": false
+  },
   {
    "date": "2026-11-23",
    "agent": "monkey",
@@ -541,6 +639,62 @@
   }
  ],
  "fills": [
+  {
+   "date": "2026-11-24",
+   "agent": "contrarian",
+   "ticker": "HSBA.L",
+   "side": "BUY",
+   "gbp": 182.47,
+   "price": 12.81
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "contrarian",
+   "ticker": "RIO.L",
+   "side": "BUY",
+   "gbp": 209.68,
+   "price": 56.57
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "contrarian",
+   "ticker": "AZN.L",
+   "side": "SELL",
+   "gbp": 69.15,
+   "price": 136.16
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "news",
+   "ticker": "GSK.L",
+   "side": "BUY",
+   "gbp": 285.55,
+   "price": 18.645
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "news",
+   "ticker": "AZN.L",
+   "side": "BUY",
+   "gbp": 276.15,
+   "price": 136.16
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "news",
+   "ticker": "TSCO.L",
+   "side": "BUY",
+   "gbp": 803.29,
+   "price": 5.544
+  },
+  {
+   "date": "2026-11-24",
+   "agent": "news",
+   "ticker": "XOM",
+   "side": "SELL",
+   "gbp": 187.18,
+   "price": 120.039
+  },
   {
    "date": "2026-11-23",
    "agent": "benchmark",

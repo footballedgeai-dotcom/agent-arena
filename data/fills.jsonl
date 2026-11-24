@@ -40,3 +40,10 @@
 {"date": "2026-11-23", "agent": "monkey", "ticker": "AVGO", "side": "BUY", "gbp": 1562.0, "price": 246.0399}
 {"date": "2026-11-23", "agent": "monkey", "ticker": "VWRL.L", "side": "BUY", "gbp": 774.0, "price": 129.53}
 {"date": "2026-11-23", "agent": "benchmark", "ticker": "VWRL.L", "side": "BUY", "gbp": 9990.01, "price": 129.53}
+{"date": "2026-11-24", "agent": "news", "ticker": "XOM", "side": "SELL", "gbp": 187.18, "price": 120.039}
+{"date": "2026-11-24", "agent": "news", "ticker": "TSCO.L", "side": "BUY", "gbp": 803.29, "price": 5.544}
+{"date": "2026-11-24", "agent": "news", "ticker": "AZN.L", "side": "BUY", "gbp": 276.15, "price": 136.16}
+{"date": "2026-11-24", "agent": "news", "ticker": "GSK.L", "side": "BUY", "gbp": 285.55, "price": 18.645}
+{"date": "2026-11-24", "agent": "contrarian", "ticker": "AZN.L", "side": "SELL", "gbp": 69.15, "price": 136.16}
+{"date": "2026-11-24", "agent": "contrarian", "ticker": "RIO.L", "side": "BUY", "gbp": 209.68, "price": 56.57}
+{"date": "2026-11-24", "agent": "contrarian", "ticker": "HSBA.L", "side": "BUY", "gbp": 182.47, "price": 12.81}
