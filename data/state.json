@@ -1,6 +1,6 @@
 {
  "start_date": "2026-11-20",
- "last_run_date": "2026-11-24",
+ "last_run_date": "2026-11-25",
  "currencies": {
   "AZN.L": "GBp",
   "SHEL.L": "GBp",
@@ -56,44 +56,34 @@
    "memory": [
     "2026-11-20: Check whether these leaders hold above SMA50 and SMA200. Exit any that break below SMA50 or fall more than 10% off highs.",
     "2026-11-23: Exit any holding that drops below SMA50 or falls more than 10% off its high. Watch TSCO.L, KO and WMT for signs of weakening momentum.",
-    "2026-11-24: Watch TSCO.L, KO and WMT as flagged. Exit any that breaks SMA50 or falls 10% off its high. AZN.L (-10.4%) and BATS.L (-10.3%) are near the exit line."
+    "2026-11-24: Watch TSCO.L, KO and WMT as flagged. Exit any that breaks SMA50 or falls 10% off its high. AZN.L (-10.4%) and BATS.L (-10.3%) are near the exit line.",
+    "2026-11-25: AZN.L (-10.4%) and BATS.L (-8.2%) are near the 10% exit line. REL.L and ULVR.L are above both SMAs and strong on 60-120d, so they are replacement candidates if a holding breaks."
    ]
   },
   "news": {
    "portfolio": {
-    "cash": 912.7340175417737,
+    "cash": 392.7404971053812,
     "positions": {
      "SHEL.L": 28.085942985535738,
      "AZN.L": 13.274165178406097,
      "BRK-B": 2.276218116866759,
-     "XOM": 6.691934913119581,
+     "XOM": 5.0569537562202065,
      "WMT": 10.291425834336637,
-     "GSK.L": 80.78172569463548,
-     "BP.L": 218.5792349726776,
-     "TSCO.L": 144.89420002397088
+     "GSK.L": 84.93029879147434,
+     "BP.L": 186.24724093364102,
+     "TSCO.L": 144.89420002397088,
+     "JNJ": 3.830628926890433
     },
-    "costs_paid": 9.452172385398434,
-    "trades": 11,
-    "turnover": 9452.172385398435
+    "costs_paid": 10.717817807399856,
+    "trades": 15,
+    "turnover": 10717.817807399853
    },
-   "pending": {
-    "decided": "2026-11-24",
-    "targets": {
-     "AZN.L": 0.18,
-     "GSK.L": 0.16,
-     "JNJ": 0.08,
-     "WMT": 0.1,
-     "TSCO.L": 0.08,
-     "SHEL.L": 0.1,
-     "BP.L": 0.1,
-     "BRK-B": 0.1,
-     "XOM": 0.06
-    }
-   },
+   "pending": null,
    "memory": [
     "2026-11-20: Watch whether the broad correction deepens. Cut names where news turns negative, such as AZN if the BLA is delayed. Avoid churn.",
     "2026-11-23: Check whether the broad tech correction deepens. Cut AZN or GSK if regulatory or trial news turns negative. Avoid churn on noise headlines.",
-    "2026-11-24: Watch AZN for BLA or regulatory delay, and GSK for trial news. Avoid churn on noise headlines such as the tech and Anthropic chatter."
+    "2026-11-24: Watch AZN for BLA or regulatory delay, and GSK for trial news. Avoid churn on noise headlines such as the tech and Anthropic chatter.",
+    "2026-11-25: Watch AZN for any BLA or regulatory delay and GSK for trial follow-up. Keep ignoring AI and tariff noise unless it hits holdings directly."
    ]
   },
   "value": {
@@ -117,50 +107,52 @@
    "memory": [
     "2026-11-20: Hold for months. Revisit only on big valuation shifts or dividend cuts. Watch RIO and BARC, which are in downtrends and below SMA200.",
     "2026-11-23: Revisit only on dividend cuts or large valuation moves. Keep watching RIO and BARC, both below SMA200 in downtrends. Consider deploying spare cash only on a clear valuation opportunity.",
-    "2026-11-24: Watch RIO and BARC for a trend turn or a dividend cut. Deploy the spare cash only on a clear valuation gap, not on short-term price moves."
+    "2026-11-24: Watch RIO and BARC for a trend turn or a dividend cut. Deploy the spare cash only on a clear valuation gap, not on short-term price moves.",
+    "2026-11-25: Watch RIO for a trend turn or dividend cut. Consider deploying cash only on a clear valuation gap, such as BP at under 8x forward earnings with an intact dividend."
    ]
   },
   "contrarian": {
    "portfolio": {
-    "cash": 667.5315865630323,
+    "cash": 544.8592888584566,
     "positions": {
      "SHEL.L": 22.46875438842859,
-     "AZN.L": 6.989553314681919,
-     "HSBA.L": 78.20350707318214,
-     "AMZN": 4.005850076804014,
-     "BP.L": 145.71948998178505,
+     "AZN.L": 5.3465148875305495,
+     "HSBA.L": 82.74368116375489,
+     "AMZN": 3.5431841242082753,
+     "BP.L": 129.00733676832422,
      "RIO.L": 15.93792174379913,
-     "ULVR.L": 14.470284237726101,
+     "ULVR.L": 13.449843145298827,
      "BARC.L": 150.20652939397723,
-     "GSK.L": 43.644298963447895,
+     "GSK.L": 40.68965993166863,
      "MSFT": 2.575220566929053,
-     "VWRL.L": 7.720219326982907
+     "VWRL.L": 7.137091002124761,
+     "GOOGL": 3.2481080664204036
     },
-    "costs_paid": 9.461297367521729,
-    "trades": 14,
-    "turnover": 9461.29736752173
+    "costs_paid": 10.766837583327707,
+    "trades": 22,
+    "turnover": 10766.83758332771
    },
    "pending": {
-    "decided": "2026-11-24",
+    "decided": "2026-11-25",
     "targets": {
-     "HSBA.L": 0.11,
-     "RIO.L": 0.095,
-     "GOOGL": 0.07,
-     "MSFT": 0.0975,
-     "VWRL.L": 0.1,
-     "AZN.L": 0.08,
-     "GSK.L": 0.083,
-     "SHEL.L": 0.08,
-     "ULVR.L": 0.072,
+     "SHEL.L": 0.085,
+     "AZN.L": 0.07,
+     "HSBA.L": 0.115,
+     "AMZN": 0.09,
      "BP.L": 0.075,
-     "AMZN": 0.07,
-     "BARC.L": 0.06
+     "RIO.L": 0.06,
+     "ULVR.L": 0.073,
+     "GSK.L": 0.084,
+     "MSFT": 0.11,
+     "VWRL.L": 0.098,
+     "GOOGL": 0.072
     }
    },
    "memory": [
     "2026-11-20: Watch whether the AI sell-off stabilises. Check if SEC or accounting issues spread to mega-caps, and whether value names keep recovering.",
     "2026-11-23: Check whether the AI sell-off stabilises and whether HSBA and RIO recover off lows. Avoid chasing the single-day Nvidia-driven rally.",
-    "2026-11-24: Check whether HSBA and RIO recover off lows and whether the AI sell-off stabilises. Be ready to exit RIO if metals weakness becomes structural."
+    "2026-11-24: Check whether HSBA and RIO recover off lows and whether the AI sell-off stabilises. Be ready to exit RIO if metals weakness becomes structural.",
+    "2026-11-25: Check whether the AI sell-off stabilises and whether HSBA recovers. Exit RIO fully if copper weakness looks structural. Watch GOOGL for a broken story versus a sentiment dip."
    ]
   },
   "monkey": {
@@ -229,6 +221,17 @@
     "contrarian": 9991.22,
     "monkey": 9982.7,
     "benchmark": 10095.67
+   }
+  },
+  {
+   "date": "2026-11-25",
+   "values": {
+    "momentum": 10175.34,
+    "news": 10130.04,
+    "value": 9040.36,
+    "contrarian": 9357.99,
+    "monkey": 9988.32,
+    "benchmark": 9913.66
    }
   }
  ]
