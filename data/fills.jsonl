@@ -59,3 +59,8 @@
 {"date": "2026-11-25", "agent": "contrarian", "ticker": "VWRL.L", "side": "SELL", "gbp": 76.66, "price": 131.47}
 {"date": "2026-11-25", "agent": "contrarian", "ticker": "HSBA.L", "side": "BUY", "gbp": 56.63, "price": 12.474}
 {"date": "2026-11-25", "agent": "contrarian", "ticker": "GOOGL", "side": "BUY", "gbp": 656.82, "price": 202.216}
+{"date": "2026-11-26", "agent": "contrarian", "ticker": "RIO.L", "side": "SELL", "gbp": 315.75, "price": 57.6538}
+{"date": "2026-11-26", "agent": "contrarian", "ticker": "BARC.L", "side": "SELL", "gbp": 605.56, "price": 4.0315}
+{"date": "2026-11-26", "agent": "contrarian", "ticker": "ULVR.L", "side": "BUY", "gbp": 61.32, "price": 50.0}
+{"date": "2026-11-26", "agent": "contrarian", "ticker": "GSK.L", "side": "BUY", "gbp": 64.77, "price": 19.16}
+{"date": "2026-11-26", "agent": "contrarian", "ticker": "HSBA.L", "side": "BUY", "gbp": 119.39, "price": 12.528}
