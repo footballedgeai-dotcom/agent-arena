@@ -64,3 +64,12 @@
 {"date": "2026-11-26", "agent": "contrarian", "ticker": "ULVR.L", "side": "BUY", "gbp": 61.32, "price": 50.0}
 {"date": "2026-11-26", "agent": "contrarian", "ticker": "GSK.L", "side": "BUY", "gbp": 64.77, "price": 19.16}
 {"date": "2026-11-26", "agent": "contrarian", "ticker": "HSBA.L", "side": "BUY", "gbp": 119.39, "price": 12.528}
+{"date": "2026-11-27", "agent": "momentum", "ticker": "WMT", "side": "SELL", "gbp": 1450.37, "price": 100.6646}
+{"date": "2026-11-27", "agent": "momentum", "ticker": "REL.L", "side": "BUY", "gbp": 1447.24, "price": 30.8}
+{"date": "2026-11-27", "agent": "value", "ticker": "BP.L", "side": "BUY", "gbp": 612.64, "price": 5.578}
+{"date": "2026-11-27", "agent": "contrarian", "ticker": "AZN.L", "side": "SELL", "gbp": 78.23, "price": 138.32}
+{"date": "2026-11-27", "agent": "contrarian", "ticker": "RIO.L", "side": "SELL", "gbp": 256.95, "price": 58.6}
+{"date": "2026-11-27", "agent": "contrarian", "ticker": "HSBA.L", "side": "BUY", "gbp": 51.2, "price": 12.676}
+{"date": "2026-11-27", "agent": "contrarian", "ticker": "MSFT", "side": "BUY", "gbp": 137.14, "price": 381.3168}
+{"date": "2026-11-27", "agent": "contrarian", "ticker": "AMZN", "side": "BUY", "gbp": 85.58, "price": 191.1985}
+{"date": "2026-11-27", "agent": "contrarian", "ticker": "GOOGL", "side": "BUY", "gbp": 121.68, "price": 213.1163}
